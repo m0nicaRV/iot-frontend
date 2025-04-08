@@ -1,0 +1,157 @@
+/* Estilos generales */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: sans-serif;
+  }
+  
+  /* Barra superior de clima */
+  .weather-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f6fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .temperature {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .temp-value {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .condition {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .weather-details {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Controles */
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .plus-minus {
+    width: 60px;
+  }
+  
+  .mode-select {
+    padding: 0.4rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .power {
+    background-color: #e67e22;
+  }
+  
+  .power:hover {
+    background-color: #d35400;
+  }
+  
+  .time-input {
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80px;
+    text-align: center;
+  }
+  
+  .save {
+    background-color: #2ecc71;
+  }
+  
+  .save:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Grid de modos */
+  .modes-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .mode-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .green {
+    background-color: #2ecc71;
+  }
+  
+  .red {
+    background-color: #e74c3c;
+  }
+  
+  .gray {
+    background-color: #bdc3c7;
+  }
+  
+  .mode-title {
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .mode-temp {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .mode-humidity {
+    font-size: 0.9rem;
+  }
+  
+  /* Listado de peticiones (ejemplo adicional) */
+  .peticiones-list {
+    margin-top: 1rem;
+  }
+  
+  .peticiones-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .peticiones-list li {
+    margin-bottom: 0.5rem;
+  }
+  

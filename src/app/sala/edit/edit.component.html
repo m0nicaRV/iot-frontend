@@ -1,0 +1,23 @@
+<div class="container mt-4" *ngIf="sala">
+    <h2>Editar Sala</h2>
+    <form (ngSubmit)="onSubmit()" #salaForm="ngForm">
+      <div class="mb-3">
+        <label for="titulo" class="form-label">Título</label>
+        <input type="text" id="titulo" name="titulo" class="form-control" required [(ngModel)]="sala.titulo">
+      </div>
+      <div class="mb-3">
+        <label for="temp" class="form-label">Temperatura</label>
+        <input type="number" step="0.01" id="temp" name="temp" class="form-control" required [(ngModel)]="sala.temp">
+      </div>
+      <div class="mb-3">
+        <label for="estado" class="form-label">Estado</label>
+        <select id="estado" name="estado" class="form-select" required [(ngModel)]="sala.estado">
+          <option value="on">On</option>
+          <option value="off">Off</option>
+        </select>
+      </div>
+      <!-- Agrega otros campos según sea necesario -->
+      <button type="submit" class="btn btn-success">Guardar cambios</button>
+    </form>
+  </div>
+  

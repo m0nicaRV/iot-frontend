@@ -1,0 +1,21 @@
+<div class="container mt-4">
+  <h2>Crear Sala</h2>
+  <form (ngSubmit)="onSubmit()" #salaForm="ngForm">
+    <div class="mb-3">
+      <label for="titulo" class="form-label">Título</label>
+      <input type="text" id="titulo" name="titulo" class="form-control" required [(ngModel)]="sala.titulo">
+    </div>
+    <div class="mb-3">
+      <label for="estado" class="form-label">Estado</label>
+      <select id="estado" name="estado" class="form-select" required [(ngModel)]="sala.estado">
+        <option value="on">On</option>
+        <option value="off">Off</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="file" class="form-label">Archivo</label>
+      <input type="file" id="file" name="file" class="form-control" (change)="onFileChange($event)" required>
+    </div>
+    <button type="submit" class="btn btn-success">Crear</button>
+  </form>
+</div>

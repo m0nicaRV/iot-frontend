@@ -1,0 +1,10 @@
+<div class="container mt-4" *ngIf="sala">
+  <h2>{{ sala.titulo }}</h2>
+  <p><strong>Temperatura:</strong> {{ sala.temp }}</p>
+  <p><strong>Estado:</strong> {{ sala.estado }}</p>
+  <!-- Si la sala tiene archivo relacionado, se muestra la imagen: -->
+  <div *ngIf="sala.file">
+    <img [src]="'http://127.0.0.1:8000/storage/' + sala.file.file_path" alt="Archivo" class="img-fluid">
+  </div>
+  <button class="btn btn-secondary" (click)="goBack()">Volver</button>
+</div>

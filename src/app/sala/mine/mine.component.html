@@ -1,0 +1,22 @@
+<div class="container mt-4">
+  <h2>Mis Salas</h2>
+  <div *ngIf="isLoading" class="text-center">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <div *ngIf="!isLoading && salas && salas.length > 0; else noSalas">
+    <div *ngFor="let sala of salas" class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{ sala.titulo }}</h5>
+        <p class="card-text"><strong>Temperatura:</strong> {{ sala.temp }}</p>
+        <p class="card-text"><strong>Estado:</strong> {{ sala.estado }}</p>
+        <button class="btn btn-primary btn-sm" (click)="view(sala.id)">Ver</button>
+        <button class="btn btn-secondary btn-sm" (click)="edit(sala.id)">Editar</button>
+      </div>
+    </div>
+  </div>
+  <ng-template #noSalas>
+    <p>No tienes salas creadas.</p>
+  </ng-template>
+</div>
